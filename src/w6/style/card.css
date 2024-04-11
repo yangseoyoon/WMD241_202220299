@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.card.card-color-blue {
+  background-color: oklch(88% 0.02 200);
+}
+
+.card {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  max-width: 25rem;
+  background-color: oklch(98% 0.025, 90);
+  overflow-x: hidden;
+  /* padding: 1rem; */
+  border-radius: 0.75rem;
+  margin-top: 3rem;
+}
+
+/*psuedo selector(=유사셀렉터)의 활용*/
+.card:first-child {
+  margin-top: 0;
+}
+/* @@@:뒤에오는것->카드 중에서도 첫번째, card는 body의 자녀로서 존재함 -> first-child = 첫째*/
+
+body {
+  font-family: "Cute Font", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.card__img {
+  width: 100%;
+}
+
+.card__top {
+  /*margin: 1rem; */
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+}
+
+.card__bottom {
+  padding: 1rem;
+}
+
+.card__p {
+  margin-top: 2rem;
+}
+
+.card__title {
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.card__subtitle {
+  line-height: 1.25rem;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.card__bottom .card__title {
+  font-weight: 400;
+}
+.card__bottom .card__subtitle {
+  margin-top: 0;
+}
+
+/*(class이름이 같을 때 특정해주는것, css css selector) 이건 잘 사용하지 않음 .card__bottom > .card__title {
+  font-weight: 400;
+}*/
