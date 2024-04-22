@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+}
+.container-opt1 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-size: 0.625rem;
+  text-align: center;
+}
+.logo {
+  margin: 10px;
+}
+
+p {
+  margin: 0px;
+  size: 5px;
+}
+.botton1 {
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.botton2 {
+  background-color: #4c5fd5;
+  border-radius: 10px;
+
+  margin: 10px;
+}
+.container-color-purple {
+  background-color: #dadbf1;
+  padding: 5rem 1.875rem 7.1875rem;
+  text-align: center;
+}
+.Search {
+  color: #dadbf1;
+  background-color: white;
+
+  border: 1px solid black;
+  text-align: left;
+  size: 20px;
+}
+
+.container-color-black {
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+.container > div {
+  padding: 1rem;
+}
+.container-opt4 {
+  font-size: 0.875rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+span {
+  margin: 20px;
+}
+h5 {
+  margin: 0px;
+}
