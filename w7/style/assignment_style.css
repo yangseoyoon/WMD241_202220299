@@ -8,35 +8,48 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1000px;
+  min-width: auto;
   margin-inline: auto;
 }
 .container-opt1 {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   font-size: 0.625rem;
-  text-align: center;
 }
 .logo {
   margin: 10px;
 }
 
-p {
-  margin: 0px;
+input {
+  border-radius: 0.1875rem;
+  border: 0.1025rem solid black;
+  width: 27.5rem;
+  height: 3.125rem;
+  padding: 1rem;
+  font-size: larger;
+}
+
+.p {
+  margin: 10px;
   size: 5px;
 }
 .botton1 {
   color: white;
   border: 0.5px solid white;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 10px;
+  padding-inline: 0.625rem;
+  align-content: center;
 }
 
 .botton2 {
   background-color: #4c5fd5;
-  border-radius: 10px;
-
+  border-radius: 5px;
+  align-content: center;
   margin: 10px;
+  border: solid 0.5px #4c5fd5;
+  padding-inline: 10px;
 }
 .container-color-purple {
   background-color: #dadbf1;
@@ -58,9 +71,18 @@ p {
   display: flex;
 }
 
-.container > div {
+.container-opt2 > div {
   padding: 1rem;
 }
+.container-color-black {
+  column-gap: 1.25rem;
+  justify-content: space-around;
+  padding-top: 5px;
+}
+.container-opt4 > div:nth-child(5) {
+  padding: 120px 16px 16px 16px;
+}
+
 .container-opt4 {
   font-size: 0.875rem;
   border-bottom-left-radius: 10px;
@@ -71,4 +93,50 @@ span {
 }
 h5 {
   margin: 0px;
+}
+
+.list-title {
+  margin: 3rem 0rem 1rem;
+}
+.category-list {
+  background-color: white;
+  padding-inline: 5rem;
+}
+
+.category-list > div > div {
+  margin: 0px 0px 1.25rem;
+  padding: 0rem 1.5rem 0rem 0rem;
+}
+
+.category-list-item {
+  display: flex;
+}
+
+.category-list > * {
+  width: 800px;
+  column-gap: 20px;
+  row-gap: 1.5rem;
+}
+.category-list-item > div {
+  flex-basis: 0;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.category-list-item > div > p {
+  color: #4c5fd5;
+  font-size: smaller;
+}
+.category-list-item > div > div > p {
+  color: #4c5fd5;
+  font-size: smaller;
+}
+
+img {
+  max-width: 80px;
+  width: 80px;
+  height: 80px;
+  margin-inline: 0px;
+  margin-top: 48px;
+  display: flex;
 }
