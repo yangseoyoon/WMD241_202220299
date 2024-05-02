@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+// 구글폰트 가져옴
+// 변수는 맨 위에 위치하는 게 좋다!
+:root {
+  --card-m-y: 1.25rem;
+  --card-m-x: 1.5rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0; // 기본 마진 삭제
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%; // 27px, 150%은 이제 거의 고정
+  color: oklch(0.3 0 0);
+  background-color: oklch(0.9 0 0);
+  overflow-x: hidden;
+}
+
+p {
+  margin-block: 0;
+}
+// 기본 마진 삭제
+img {
+  display: block;
+}
+
+.section {
+  > h2 {
+    // 섹션 바로 아래 있는 h만 적용
+    text-align: center;
+  }
+}
+
+.container {
+  max-width: 60rem;
+  padding: 5rem;
+  margin-inline: auto; // 가운데 위치
+  background-color: oklch(0.95 0 0);
+}
+
+.card {
+  margin-top: 2rem; // 카드 끼리 마진
+  background-color: oklch(1 0 0);
+  border: 1px solid oklch(0.5 0 0);
+  border-radius: 0.75rem;
+
+  .section--opt-pos-rel & /*해당section 아래에 있는 카드*/ {
+    position: relative;
+    &:nth-child(1) {
+      left: 1rem;
+    }
+    &:nth-child(2) {
+      left: 2rem;
+      margin-top: 0;
+      top: -10rem;
+    }
+    &:nth-child(3) {
+      left: 3rem;
+      top: -20rem;
+    }
+    &:nth-child(4) {
+      left: 4rem;
+      top: -30rem;
+    }
+    &:nth-child(5) {
+      left: 5rem;
+      top: -40rem;
+    }
+    .section--opt-margin-negative & {
+      margin-top: -10rem;
+      position: relative;
+      &first-child {
+        margin-top: 0;
+      }
+      @for $i from 1 through 5 {
+        &:nth-child(#{$i}) {
+          z-index: #{$i};
+        }
+      }
+    }
+  }
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+  &__top {
+    padding-block: var(
+      --card-m-y
+    ); // --는 무조건 챙기기, 뒤엔 내가 정한 축약 이름, 이걸 똑같은 값을 가진 곳에 작성하면
+    // 패딩에서 좌우보다 상하가 작은게 좋음 이미 글자가 위 공간이 있기 때문
+    padding-inline: var(--card-m-x);
+  }
+  &__middle {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    // 4:3비율에 맞춤
+    object-fit: cover;
+  }
+  &__bottom {
+    padding-block: var(--card-m-y);
+    padding-inline: var(--card-m-x);
+  }
+  &__author {
+    font-weight: 600;
+  }
+  &__author-role {
+  }
+  &__title {
+    font-weight: 600;
+  }
+  &__subtitle {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: oklch(0.5 0 0);
+  }
+  &__desc /*넘치는 글을 각주처리해줌*/ {
+    display: -webkit-box;
+    overflow: hidden; /*얘가 있어야 글이 넘칠 때 보여주지 않음*/
+    -webkit-line-clamp: 3; /*3이면 3줄, 4면 4줄까지 보여준다*/
+    -webkit-box-orient: vertical;
+  }
+
+  &--type-new {
+    &::after {
+      top: 0;
+      right: 0;
+      position: absolute;
+      content: "N";
+      aspect-ratio: 1 / 1;
+      display: block;
+      width: 1lh;
+      font-size: 0.875rem;
+      border-radius: 625rem;
+      color: white;
+      background-color: red;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  &--pos-rel {
+    position: relative;
+  }
+}
