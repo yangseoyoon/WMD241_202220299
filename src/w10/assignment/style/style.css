@@ -9,3 +9,83 @@ body {
   font-size: 1.125rem;
   line-height: 150%;
 }
+
+img {
+  max-width: 30px;
+  width: 30px;
+  height: 30px;
+  margin-inline: 0px;
+  margin: 0px;
+  margin-top: 60px;
+}
+
+.topbar {
+  background-color: #f6f6eb;
+  display: flex;
+  color: #381fd1;
+}
+
+.sidebar {
+  padding-top: 4rem;
+}
+
+.section--flex {
+  display: flex;
+  margin-inline: 20px;
+}
+
+.card-1 {
+  background-color: #f3f2fc;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.container--card {
+  display: grid;
+  margin: 64px 0px 0px 64px;
+  -moz-column-gap: 1.5rem;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 300px;
+  padding: 0.75rem;
+  margin-inline: auto;
+}
+
+.card--middle {
+  border-radius: 0.625rem;
+  border: solid black 0.5px;
+}
+
+.card--collections {
+  display: flex;
+  margin-inline: 60px;
+}
+
+.card--collections > div {
+  border: black solid 1px;
+  border-radius: 10px;
+}
+
+.container--bottombar {
+  background-color: #11284b;
+  color: white;
+}
+
+.bottom__title {
+  padding-block: 50px;
+  padding-inline: 70px;
+}
+
+.bottom--p {
+  display: flex;
+}
+
+.bottom--p > div {
+  padding: 10px;
+  margin: 80px;
+}
+
+.icons {
+  padding-bottom: 50px;
+}
