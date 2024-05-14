@@ -56,8 +56,8 @@ h1 {
 
 .section_middle {
   display: grid;
-  grid-template-columns: 550px 800px;
-  margin-inline: 70px;
+  grid-template-columns: 1fr 1fr;
+  margin-inline: 10px;
 }
 
 .card-1 {
