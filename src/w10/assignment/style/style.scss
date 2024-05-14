@@ -8,57 +8,94 @@ body {
   margin: 0;
   font-size: 1.125rem;
   line-height: 150%;
+  max-width: 100%;
 }
 
 img {
-  max-width: 30px;
-  width: 30px;
-  height: 30px;
-  margin-inline: 0px;
+  max-width: 100%;
+  width: 40px;
+  height: 40px;
   margin: 0px;
-
-  margin-top: 60px;
+  border-radius: 4px;
+  border: solid 1px #4b4b4e;
 }
 
 .topbar {
   background-color: #f6f6eb;
   display: flex;
   color: #381fd1;
+  & > p {
+    padding-inline: 30px;
+    font-weight: bolder;
+    font-size: small;
+  }
+  & > :nth-child(7) {
+    background-color: #381fd1;
+    color: white;
+    border-radius: 5px;
+  }
 }
 
 .sidebar {
   padding-top: 4rem;
+  margin-left: 80px;
 }
 
-.section--flex {
-  display: flex;
-  margin-inline: 20px;
+.card-botton {
+  border-radius: 5px;
+  background-color: #381fd1;
+  color: #f3f2fc;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+}
+h1 {
+  margin-top: 80px;
+}
+.section_middle {
+  display: grid;
+  grid-template-columns: 550px 800px;
+  margin-inline: 70px;
 }
 .card-1 {
   background-color: #f3f2fc;
   border-radius: 10px;
-
-  padding: 1.5rem;
+  padding: 20px;
+  max-width: 280px;
 }
 .container--card {
   display: grid;
-  margin: 64px 0px 0px 64px;
-  -moz-column-gap: 1.5rem;
-  column-gap: 1.5rem;
-  row-gap: 1.5rem;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 300px 300px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  margin-right: 80px;
+  margin: 0px 0px 64px;
   padding: 0.75rem;
-
-  margin-inline: auto;
+}
+.card_subtitle {
+  color: #381fd1;
+  font-weight: bold;
 }
 
 .card--middle {
   border-radius: 0.625rem;
   border: solid black 0.5px;
+  padding: 24px 24px 40px;
+  max-height: 235px;
+  max-width: 261px;
 }
+.card--middle > h3 {
+  padding: 0;
+  margin: 0px 0px 8px;
+}
+.card--middle > p {
+  margin: 12px 0px 8px;
+}
+
 .card--collections {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   margin-inline: 60px;
 }
 
@@ -70,21 +107,27 @@ img {
 .container--bottombar {
   background-color: #11284b;
   color: white;
+  margin-top: 60px;
 }
 
 .bottom__title {
   padding-block: 50px;
   padding-inline: 70px;
+  & > h1 {
+    margin: 30px;
+  }
 }
 
 .bottom--p {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  & > div {
+    max-width: 200px;
+    padding: 10px;
+    margin: 80px;
+  }
 }
 
-.bottom--p > div {
-  padding: 10px;
-  margin: 80px;
-}
 .icons {
   padding-bottom: 50px;
 }
