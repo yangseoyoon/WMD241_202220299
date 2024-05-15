@@ -1,0 +1,155 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 150%;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  border-radius: 4px;
+  border: solid 1px #4b4b4e;
+}
+
+.topbar {
+  background-color: #f6f6eb;
+  display: flex;
+  color: #381fd1;
+}
+.topbar > p {
+  padding-inline: 30px;
+  font-weight: bolder;
+  font-size: small;
+}
+.topbar > :nth-child(7) {
+  background-color: #381fd1;
+  color: white;
+  border-radius: 5px;
+}
+
+.sidebar {
+  padding-top: 4rem;
+  margin-left: 80px;
+}
+
+.card-botton {
+  border-radius: 5px;
+  background-color: #381fd1;
+  color: #f3f2fc;
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 80px;
+}
+
+.section_middle {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  margin-inline: 10px;
+}
+
+.card-1 {
+  background-color: #f3f2fc;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 280px;
+}
+
+.container--card {
+  background-color: aquamarine;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 12.5rem));
+  grid-template-rows: 1fr 1fr;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+  margin: 0px 0px 64px;
+  padding: 1.25rem;
+}
+
+.card_subtitle {
+  color: #381fd1;
+  font-weight: bold;
+}
+
+.card--middle {
+  border-radius: 0.625rem;
+  border: solid black 0.5px;
+  padding: 24px 24px 40px;
+  max-height: 235px;
+  min-height: 235px;
+  max-width: 261px;
+  min-height: 261px;
+}
+
+.card--middle > h3 {
+  padding: 0;
+  margin: 0px 0px 8px;
+}
+
+.card--middle > p {
+  margin: 12px 0px 8px;
+}
+
+.container--bottom_card {
+  margin-left: 590px;
+}
+
+.card--collections {
+  display: grid;
+  grid-template-columns: 261px 261px 261px;
+  margin-inline: 0;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
+.card--collections > div {
+  border: black solid 1px;
+  border-radius: 10px;
+  max-width: 261px;
+  max-height: 350px;
+  min-height: 350px;
+  min-width: 261px;
+}
+
+.container--bottombar {
+  background-color: #11284b;
+  color: white;
+  margin-top: 60px;
+}
+
+.bottom__title {
+  padding-block: 50px;
+  padding-inline: 70px;
+}
+.bottom__title > h1 {
+  margin: 30px;
+}
+
+.bottom--p {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.bottom--p > div {
+  max-width: 200px;
+  padding: 10px;
+  margin: 80px;
+}
+
+.icons {
+  padding-bottom: 50px;
+}
