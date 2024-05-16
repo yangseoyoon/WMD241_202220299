@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+
+.btn {
+  cursor: pointer; //마우스포인터변경//
+  max-width: fit-content;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  text-transform: capitalize; //text 대소문자로 바꾸는 것//
+  padding-block: 0.375rem 0.5rem;
+  background-color: oklch(0.4 0.1 150);
+  color: oklch(0.9 0.1 150);
+  border-radius: 64rem;
+  //작업용으로 설정해둔것..나중에삭제//
+  margin-top: 1.25rem;
+
+  &:hover {
+    transition: all 1000ms ease-out;
+    background-color: oklch(0.6 0.3 170);
+    color: oklch(0.9 0.1 150);
+  } //마우스반응버튼-다른요소에도적용가능함//
+
+  &--type {
+    &-elevated {
+      background-color: oklch(0.95 0.0025 150);
+      color: oklch(0.45 0.1 150);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      &:hover {
+        background-color: oklch(0.95 0.0025 240);
+        color: oklch(0.45 0.1 240);
+        box-shadow: 0px 0.125rem 0.125rem 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+    &-tonal {
+      background-color: oklch(0.8 0.05 150);
+      color: oklch(0.3 0.1 150);
+    }
+    &-outline {
+      color: oklch(0.4 0.1 150);
+      background-color: unset;
+      border: 1px solid oklch(0.5 0 150);
+    }
+    &-text //padding좌우가 달루
+    {
+      color: oklch(0.4 0.1 150);
+      padding-inline: 12px;
+      background-color: unset;
+      &:hover {
+        background-color: unset;
+        color: oklch(0.4 0.1 150);
+        animation-name: "rainbow"; //hover상태가 되면 해당 애니메이션을 출력
+        animation-duration: 5s; //애니메이션 출력속도
+      }
+    }
+  }
+}
+@keyframes rainbow {
+  0% {
+    background-color: oklch(0.5, 0.2, 0);
+  }
+  100% {
+    background-color: oklch(50, 0.2, 360);
+  }
+}
