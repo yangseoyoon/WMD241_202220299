@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 75rem;
+  margin-inline: auto;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 1fr;
+  background-color: oklch(0.95 0 0);
+  gap: 1.5rem;
+}
+
+// .card {
+//   padding: 1rem;
+//   background-color: oklch(0.9 0.2 240);
+//   border: 2px solid rgba(0, 0, 0, 0);
+//   transition: all 300ms ease-in-out;
+//   &:hover {
+//     background-color: oklch(0.9 0.2 120);
+//   }
+//   @for $i from 1 through 100 {
+//     .container[data-selected="#{$i}"] &:nth-child(#{$i}) {
+//       border: 2px solid rgba(0, 0, 0, 1);
+//     }
+//   }
+// }
+
+.card {
+  padding: 1rem;
+  background-color: oklch(0.9 0.2 240);
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: all 300ms ease-in-out;
+  &:hover {
+    background-color: oklch(0.9 0.2 120);
+  }
+  @for $i from 0 through 100 {
+    @at-root .container[data-selected="#{$i}"] &:nth-child(#{$i}) {
+      border: 2px solid rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+// .card {
+//   padding: 1rem;
+//   background-color: oklch(0.9 0.2 240);
+//   border: 2px solid rgba(0, 0, 0, 0);
+//   transition: all 300ms ease-in-out;
+
+//   &:hover {
+//     background-color: oklch(0.9 0.2 120);
+//   }
+// }
+
+// @for $i from 1 through 100 {
+//   .container[data-selected="#{$i}"] .card:nth-child(#{$i}) {
+//     border: 2px solid rgba(0, 0, 0, 1);
+//   }
+// }
+
+//at-root 코드는 밖에있으면 실행 ㄴㄴ 부모코드 앙ㄴ에 잇을때만 실행 ㄱㄴ
+//구조적으로...같은것끼리는 묶어주는게 좋다...응네
