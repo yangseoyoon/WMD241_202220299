@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie Embeding</title>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script>
+      LottieInteractivity.create({
+        player: '#lottie-2',
+        mode: 'cursor',
+        actions: [
+          {
+            type: 'click',
+            forceFlag: false,
+          },
+        ],
+      });
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="section">
+      <div class="container">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+          labore.
+        </h1>
+
+        <dotlottie-player
+          id="lottie-1"
+          class="lottie"
+          src="https://lottie.host/91d03136-e270-45ad-9dc5-0f8aa3e360f2/1nJlQm2taj.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate
+          necessitatibus reiciendis incidunt, voluptatem dignissimos repellendus
+          ut sequi cumque eos similique ea delectus illo, qui ipsa, adipisci
+          accusantium quas. Minima, iure et sunt in veritatis tempore rerum
+          laborum doloribus blanditiis voluptate odio saepe ratione quisquam
+          deleniti accusantium asperiores amet magnam! Eligendi?
+        </p>
+        <lottie-player
+          id="lottie-2"
+          class="lottie"
+          src="https://lottie.host/91d03136-e270-45ad-9dc5-0f8aa3e360f2/1nJlQm2taj.json"
+          background="transparent"
+          speed="1"
+        ></lottie-player>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
+          deleniti obcaecati adipisci saepe? Ullam fugiat dolorum possimus
+          cumque, quasi at?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
